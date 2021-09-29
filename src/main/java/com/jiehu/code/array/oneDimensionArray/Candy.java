@@ -34,16 +34,10 @@ public class Candy {
         list.add(1);
         for (int i = 1; i < ratings.length; i++) {
             int n = 1;
-            if (i == ratings.length - 1) {
-                if (ratings[i] > ratings[i - 1]) {
-                    n += list.get(i - 1);
-                }
-            } else {
-                if (ratings[i] > ratings[i - 1]) {
-                    n += list.get(i - 1);
-                } else if (ratings[i] == ratings[i - 1]) {
-                    n = list.get(i - 1);
-                }
+            if (ratings[i] > ratings[i - 1]) {
+                n += list.get(i - 1);
+            } else if (ratings[i] == ratings[i - 1]) {
+                n = list.get(i - 1);
             }
 
             list.add(n);
@@ -53,6 +47,29 @@ public class Candy {
 
         System.out.println(list);
 
+        return sum;
+    }
+
+    public int candy1(int[] ratings) {
+        int n = ratings.length;
+        int sum = 1;
+        //pre： 标记为最多多少糖果，逐渐增加，分数小的，直接清为1
+        int inc = 1, dec = 0, pre = 1;
+        for (int i = 1; i < n; i++) {
+            if (ratings[i] >= ratings[i - 1]) {
+                dec = 0;
+                pre = ratings[i] == ratings[i - 1] ? 1 : pre + 1;
+                sum += pre;
+                inc = pre;
+            } else {
+                dec++;
+                if (dec == inc) {
+                    dec++;
+                }
+                sum += dec;
+                pre = 1;
+            }
+        }
         return sum;
     }
 }

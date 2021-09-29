@@ -36,9 +36,10 @@ public class oneDimensionArrayT {
 
     public static void getCandy() {
 //        int[] leve = {1, 3, 2, 2, 1};
+//        int[] leve = {1, 3, 5, 3, 2, 2};
         int[] leve = {1, 2, 87, 87, 87, 2, 1};
         Candy candy = new Candy();
-        System.out.println(candy.candy(leve));
+        System.out.println(candy.candy1(leve));
 
     }
 }
