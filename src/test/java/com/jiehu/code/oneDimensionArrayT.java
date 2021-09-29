@@ -1,5 +1,6 @@
 package com.jiehu.code;
 
+import com.jiehu.code.array.oneDimensionArray.Candy;
 import com.jiehu.code.array.oneDimensionArray.MissingRanges;
 import com.jiehu.code.array.oneDimensionArray.SummaryRanges;
 import com.jiehu.code.array.oneDimensionArray.ValidMountainArray;
@@ -9,7 +10,8 @@ public class oneDimensionArrayT {
 //        validMountainArray();
 
 //        summaryRanges();
-        findMissingRanges();
+//        findMissingRanges();
+        getCandy();
     }
 
     public static void validMountainArray() {
@@ -30,5 +32,13 @@ public class oneDimensionArrayT {
         int[] nums = {0, 1, 3, 50, 75};
         MissingRanges missingRanges = new MissingRanges();
         System.out.println(missingRanges.findMissingRanges(nums, 0, 99));
+    }
+
+    public static void getCandy() {
+//        int[] leve = {1, 3, 2, 2, 1};
+        int[] leve = {1, 2, 87, 87, 87, 2, 1};
+        Candy candy = new Candy();
+        System.out.println(candy.candy(leve));
+
     }
 }

@@ -23,6 +23,8 @@ package com.jiehu.code.array.oneDimensionArray;
  * <p>
  * 输入：nums = [1]
  * 输出：[1]
+ *
+ * 没看懂题&&&&&&&&
  */
 public class NextPermutation {
     public void nextPermutation(int[] nums) {
