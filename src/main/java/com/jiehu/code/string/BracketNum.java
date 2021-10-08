@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 085. 生成匹配的括号
+ *
  * 问题：数字n代表生成的括号的对数，规则时一一对应
  * 例如：n=2
  * 输出：[(()), ()()]
