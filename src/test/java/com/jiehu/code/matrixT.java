@@ -26,17 +26,24 @@ public class matrixT {
         /**
          * 测试3： 4数之和
          */
-        fourSum();
+//        fourSum();
 
         /**
          * 测试4：矩阵顺时针和逆时针旋转
          */
-        rotate();
+//        rotate();
 
         /**
          * 跳跃游戏
          */
-        jump();
+//        jump();
+
+        /**
+         * 旋转2测试
+         */
+//        spiralOrder2();
+
+        diagonalOrder();
     }
 
     public static void jump() {
@@ -115,5 +122,25 @@ public class matrixT {
             }
             System.out.print("\n");
         }
+    }
+
+    public static void spiralOrder2() {
+        int n = 3;
+        SpiralOrder2 spiralOrder2 = new SpiralOrder2();
+        int[][] ints = spiralOrder2.generateMatrix(3);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(ints[i][j]);
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public static void diagonalOrder() {
+        int[][] matrix = {{2, 3, 4}};
+        DiagonalOrder diagonalOrder = new DiagonalOrder();
+
+        System.out.println(diagonalOrder.findDiagonalOrder(matrix));
     }
 }

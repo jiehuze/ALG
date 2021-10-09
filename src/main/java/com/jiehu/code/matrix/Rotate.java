@@ -1,6 +1,8 @@
 package com.jiehu.code.matrix;
 
 /**
+ * 48. 旋转图像
+ * <p>
  * 输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
  * 输出：[[7,4,1],[8,5,2],[9,6,3]]
  * <p>
@@ -44,6 +46,9 @@ public class Rotate {
         }
     }
 
+    /**
+     * 顺时针旋转
+     */
     public void rotate(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n / 2; ++i) {
@@ -57,6 +62,9 @@ public class Rotate {
         }
     }
 
+    /**
+     * 逆时针旋转
+     */
     public void rotate2(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n / 2; ++i) {
