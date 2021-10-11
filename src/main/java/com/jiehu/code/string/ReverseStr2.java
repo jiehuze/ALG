@@ -25,13 +25,6 @@ package com.jiehu.code.string;
  * 1 <= k <= 104
  */
 public class ReverseStr2 {
-    //输入
-    //"abcdefg"
-    //2
-    //输出
-    //"cbadgfe"
-    //预期结果
-    //"bacdfeg"
     public String reverseStr(String s, int k) {
         char[] ss = s.toCharArray();
         int len = ss.length;
@@ -40,14 +33,14 @@ public class ReverseStr2 {
         int n = len % (2 * k);
 
         for (int i = 0; i < m; i++) {
-            reverse(ss, i * 2 * k, i * 2 * k + k-1);
+            reverse(ss, i * 2 * k, i * 2 * k + k - 1);
         }
 
         if (n < k) {
-            reverse(ss, m * 2 * k, m * 2 * k + n-1);
+            reverse(ss, m * 2 * k, m * 2 * k + n - 1);
         }
         if (n >= k) {
-            reverse(ss, m * 2 * k, m * 2 * k + k-1);
+            reverse(ss, m * 2 * k, m * 2 * k + k - 1);
         }
 
         return String.valueOf(ss);
