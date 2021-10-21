@@ -1,4 +1,4 @@
-package com.jiehu.code.array.oneDimensionArray;
+package com.jiehu.code.array;
 
 /**
  * 189. 旋转数组

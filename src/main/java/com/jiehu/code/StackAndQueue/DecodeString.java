@@ -108,7 +108,7 @@ public class DecodeString {
      */
     public String getDigit(String s) {
         StringBuffer ret = new StringBuffer();
-        while (Character.isDigit(s.charAt(ptr))) {
+        while (ptr < s.length() && Character.isDigit(s.charAt(ptr))) {
             ret.append(s.charAt(ptr++));
         }
 

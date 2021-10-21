@@ -1,9 +1,9 @@
 package com.jiehu.code;
 
-import com.jiehu.code.array.oneDimensionArray.Candy;
-import com.jiehu.code.array.oneDimensionArray.MissingRanges;
-import com.jiehu.code.array.oneDimensionArray.SummaryRanges;
-import com.jiehu.code.array.oneDimensionArray.ValidMountainArray;
+import com.jiehu.code.array.Candy;
+import com.jiehu.code.array.MissingRanges;
+import com.jiehu.code.array.SummaryRanges;
+import com.jiehu.code.array.ValidMountainArray;
 
 public class oneDimensionArrayT {
     public static void main(String[] args) {

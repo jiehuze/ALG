@@ -1,4 +1,4 @@
-package com.jiehu.code.array.oneDimensionArray;
+package com.jiehu.code.array;
 
 /**
  * 665. 非递减数列
@@ -33,7 +33,7 @@ public class CheckPossibility {
                 if (cnt > 1) {
                     return false;
                 }
-                //第一个字符传不能被替换,因为第一个字符可能会非常大，没有办法替换
+                //第一个字符串不能被替换,因为第一个字符可能会非常大，没有办法替换
                 if (i > 0 && nums[i + 1] < nums[i - 1]) {
                     nums[i + 1] = nums[i];
                 }

@@ -1,4 +1,4 @@
-package com.jiehu.code.array.oneDimensionArray;
+package com.jiehu.code.array;
 
 /**
  * 605. 种花问题
