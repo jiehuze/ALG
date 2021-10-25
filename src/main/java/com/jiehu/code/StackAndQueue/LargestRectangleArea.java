@@ -1,5 +1,7 @@
 package com.jiehu.code.StackAndQueue;
 
+import java.util.LinkedList;
+
 /**
  * 84. 柱状图中最大的矩形
  * 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
@@ -20,8 +22,26 @@ package com.jiehu.code.StackAndQueue;
  */
 public class LargestRectangleArea {
     public int largestRectangleArea(int[] heights) {
-        int ans = 0;
+        int area = 0;
+        LinkedList<Integer> stack = new LinkedList<>();
+        //增加哨兵模式，防止栈为空，并且可以少判断
+        int[] newHeights = new int[heights.length + 2];
+        for (int i = 0; i < heights.length; i++) {
+            newHeights[i + 1] = heights[i];
+        }
+        heights = newHeights;
+        stack.push(0);
 
-        return ans;
+        for (int i = 1; i < heights.length; i++) {
+            //当前高度小于栈顶高度是，需要出栈计算栈中的最大面积
+            while (heights[i] < heights[stack.peek()]) {
+                int height = heights[stack.pop()];
+                int weith = i - stack.peek() - 1;
+                area = Math.max(area, height * weith);
+            }
+            stack.push(i);
+        }
+
+        return area;
     }
 }
