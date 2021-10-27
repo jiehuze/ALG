@@ -1,5 +1,7 @@
 package com.jiehu.code;
 
+import com.jiehu.code.array.FourSum;
+import com.jiehu.code.array.ThreeSum;
 import com.jiehu.code.matrix.*;
 import com.jiehu.code.bdf.Jump;
 
