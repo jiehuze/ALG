@@ -18,7 +18,33 @@ public class StackAndQueueT {
 //        find132();
 //        reverseWords();
 
-        maxNumber();
+//        maxNumber();
+//        lastStoneWeight();
+//        findKthLargest();
+//        topKFrequent();
+        kClosest();
+    }
+
+    public static void kClosest() {
+//        int[][] points = {{1, 3}, {-2, 2}};
+        int[][] points = {{3, 3}, {5, -1}, {-2, 4}};
+        KClosest kClosest = new KClosest();
+        System.out.println(Arrays.deepToString(kClosest.kClosest(points, 2)));
+
+    }
+
+    public static void topKFrequent() {
+        int[] nums = {1, 1, 1, 2, 2, 3};
+        TopKFrequent topKFrequent = new TopKFrequent();
+        System.out.println(Arrays.toString(topKFrequent.topKFrequent(nums, 2)));
+
+    }
+
+    public static void findKthLargest() {
+        int[] nums = {3, 2, 1, 5, 6, 4};
+        FindKthLargest findKthLargest = new FindKthLargest();
+        System.out.println(findKthLargest.findKthLargest(nums, 2));
+
     }
 
     public static void simplifyPath() {
@@ -60,5 +86,12 @@ public class StackAndQueueT {
         int k = 5;
         MaxNumber maxNumber = new MaxNumber();
         System.out.println(Arrays.toString(maxNumber.maxNumber(nums1, nums2, k)));
+    }
+
+    public static void lastStoneWeight() {
+        int[] stones = {3, 7, 2};
+        LastStoneWeight lastStoneWeight = new LastStoneWeight();
+        System.out.println(lastStoneWeight.lastStoneWeight(stones));
+
     }
 }
