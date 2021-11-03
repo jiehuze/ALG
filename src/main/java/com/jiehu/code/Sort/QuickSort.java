@@ -13,6 +13,8 @@ package com.jiehu.code.Sort;
  * 一次轮询后，最后得到的就是一个有序数组了
  * <p>
  * 大数据的mapreduce都是使用的快排的方式
+ * <p>
+ * 该算法和归并排序的思想一样，同样使用分治法进行，指示归并需要分治后合并，快排不需要合并过程，自动是顺序的
  */
 public class QuickSort {
     public int[] sort(int[] arrays) {

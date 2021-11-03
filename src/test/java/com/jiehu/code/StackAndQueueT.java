@@ -22,7 +22,22 @@ public class StackAndQueueT {
 //        lastStoneWeight();
 //        findKthLargest();
 //        topKFrequent();
-        kClosest();
+//        kClosest();
+        medianFinder();
+    }
+
+    public static void medianFinder() {
+        MedianFinder medianFinder = new MedianFinder();
+        medianFinder.addNum(-1);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(-2);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(-3);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(-4);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(-5);
+        System.out.println(medianFinder.findMedian());
     }
 
     public static void kClosest() {
