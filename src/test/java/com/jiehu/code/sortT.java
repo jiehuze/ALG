@@ -1,5 +1,6 @@
 package com.jiehu.code;
 
+import com.jiehu.code.Sort.BubbleSort;
 import com.jiehu.code.Sort.InsertSort;
 import com.jiehu.code.Sort.MergeSort;
 import com.jiehu.code.Sort.QuickSort;
@@ -10,9 +11,10 @@ public class sortT {
     public static void main(String[] args) {
         int[] arr = {1, 5, 3, 7, 6, 8};
 
-//        quickSort(arr);
+        quickSort(arr);
         insertSort(arr);
         mergeSort(arr);
+        bubbleSort(arr);
     }
 
     /**
@@ -38,6 +40,14 @@ public class sortT {
     public static void mergeSort(int[] arr) {
         MergeSort mergeSort = new MergeSort();
         System.out.println(Arrays.toString(mergeSort.sort(arr)));
+    }
+
+    /**
+     * 冒泡排序
+     */
+    public static void bubbleSort(int[] arr) {
+        BubbleSort bubbleSort = new BubbleSort();
+        System.out.println(Arrays.toString(bubbleSort.sort(arr)));
     }
 
     public static void sortt() {
