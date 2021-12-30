@@ -50,7 +50,7 @@ public class SearchRange {
     }
 
     /**
-     * 左查找的固定公式：左闭有开，返回：left
+     * 左查找的固定公式：左闭又开，返回：left
      */
     public int searchLeft(int[] nums, int target, int left, int right) {
         while (left < right) {
@@ -67,7 +67,7 @@ public class SearchRange {
     }
 
     /**
-     * 右查找的固定公式：左闭有开，返回：left-1
+     * 右查找的固定公式：左闭右开，返回：left-1
      */
     public int searchRight(int[] nums, int target, int left, int right) {
         while (left < right) {
