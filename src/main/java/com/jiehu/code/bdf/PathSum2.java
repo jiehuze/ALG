@@ -1,6 +1,6 @@
 package com.jiehu.code.bdf;
 
-import com.jiehu.code.tree.TreeNode;
+import com.jiehu.code.tree.vo.TreeNode;
 
 import java.util.*;
 

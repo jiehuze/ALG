@@ -1,5 +1,10 @@
-package com.jiehu.code.tree;
+package com.jiehu.code.tree.vo;
 
+/**
+ * @Create
+ * @Time $[DATE]
+ * @Description
+ */
 public class TreeNode {
     public int val;
     public TreeNode left;
