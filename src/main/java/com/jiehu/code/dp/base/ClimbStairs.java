@@ -25,6 +25,12 @@ package com.jiehu.code.dp.base;
  * 1 <= n <= 45
  */
 public class ClimbStairs {
+    /**
+     * 方法1： 使用动归方式，利用斐波那契数列
+     *
+     * @param n
+     * @return
+     */
     public int climbStairs(int n) {
         //1。 定义dp[i], 爬到i层时，有多少种方法
         int[] dp = new int[n + 1];
@@ -41,6 +47,35 @@ public class ClimbStairs {
         dp[1] = 1;
         for (int i = 2; i <= n; i++) {
             dp[i] = dp[i - 1] + dp[i - 2];
+        }
+
+        return dp[n];
+    }
+
+    /**
+     * 方法2： 使用完全背包的方式，
+     * 可以将 1阶，2阶 .... m阶 为物品
+     * 将楼顶定义为 背包
+     */
+    public int climbStairs2(int n) {
+        /**
+         * 1. 定义dp[i], 爬到楼梯i时，有多少种方法
+         */
+        int[] dp = new int[n + 1];
+        //定义出一次物品：即背包中爬楼梯有多少个跨度
+        int[] weight = {1, 2}; //可以认为时物品数
+        /**
+         * 2, 递推公式： 根据种数的递推公式： dp[j] += dp[j-weight[i]]
+         * 3. 初始化： dp[0] = 1
+         * 4. 遍历顺序： 因为爬楼梯即是获取排列的子集个数，所以是排列方式，先遍历背包，后遍历物品
+         */
+
+        for (int j = 0; j <= n; j++) {
+            for (int i = 0; i < weight.length; i++) {
+                if (j >= weight[i]) {
+                    dp[j] += dp[j - weight[i]];
+                }
+            }
         }
 
         return dp[n];
