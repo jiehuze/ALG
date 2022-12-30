@@ -16,6 +16,9 @@ package com.jiehu.code.greedy;
  * 解释：最长连续递增序列是 [2], 长度为1。
  */
 public class FindLengthOfLCIS {
+    /**
+     * 贪心算法
+     */
     public int findLengthOfLCIS(int[] nums) {
         int maxLen = 1;
         int l = 0, r = 1;
@@ -29,5 +32,32 @@ public class FindLengthOfLCIS {
         }
 
         return maxLen;
+    }
+
+    /**
+     * 方法2： 动态规划算法
+     * 内层消耗和执行时间都不如 贪心算法
+     */
+    public int findLengthOfLCIS2(int[] nums) {
+        //1。 定义dp[i], 下标为i时的最大连续字串长度
+        int[] dp = new int[nums.length];
+        /**
+         * 2. 推动公式： 有两种状态
+         *    1） nums[i] > nums[i-1] dp[i] = dp[i-1]+1
+         *    2) nums[i] <= nums[i-1] dp[i] = 1
+         * 3. 初始化，每个dp初始都为1
+         * 4. 遍历顺序，i遍历从0-i
+         */
+
+        int res = 1;
+        dp[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] <= nums[i - 1]) dp[i] = 1;
+            else dp[i] = dp[i - 1] + 1;
+
+            res = Math.max(res, dp[i]);
+        }
+
+        return res;
     }
 }
